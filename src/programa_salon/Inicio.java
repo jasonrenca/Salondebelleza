@@ -42,8 +42,8 @@ public class Inicio extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         usuario = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
         contraseña = new javax.swing.JPasswordField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
