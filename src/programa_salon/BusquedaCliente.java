@@ -29,18 +29,18 @@ public class BusquedaCliente extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         txtrut = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         txtnombre = new javax.swing.JTextField();
         txtdireccion = new javax.swing.JTextField();
         txttelefono = new javax.swing.JTextField();
         txtnac = new javax.swing.JTextField();
         txtemail = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -56,11 +56,6 @@ public class BusquedaCliente extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(90, 20, 155, 22);
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Rut del Cliente:");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(15, 61, 95, 15);
-
         txtrut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtrutActionPerformed(evt);
@@ -68,31 +63,6 @@ public class BusquedaCliente extends javax.swing.JFrame {
         });
         getContentPane().add(txtrut);
         txtrut.setBounds(128, 59, 100, 20);
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel3.setText("Nombre:");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(15, 87, 51, 15);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel4.setText("Direccion:");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(15, 118, 59, 15);
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel5.setText("Telefono:");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(15, 144, 57, 15);
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel6.setText("Fecha Nac.:");
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(15, 180, 67, 15);
-
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel7.setText("Email:");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(15, 215, 35, 15);
 
         txtnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +103,36 @@ public class BusquedaCliente extends javax.swing.JFrame {
         });
         getContentPane().add(txtemail);
         txtemail.setBounds(86, 213, 132, 20);
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Rut del Cliente:");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(15, 61, 95, 15);
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel3.setText("Nombre:");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(15, 87, 51, 15);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel4.setText("Direccion:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(15, 118, 59, 15);
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel5.setText("Telefono:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(15, 144, 57, 15);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel6.setText("Fecha Nac.:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(15, 180, 67, 15);
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel7.setText("Email:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(15, 215, 35, 15);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Salir");
@@ -182,7 +182,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(-5, -9, 350, 350);
+        jLabel8.setBounds(-5, -9, 360, 370);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

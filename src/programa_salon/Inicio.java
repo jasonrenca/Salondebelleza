@@ -137,7 +137,7 @@ public class Inicio extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if(String.valueOf(usuario.getText()).compareTo("admin")==0 && String.valueOf(contraseña.getPassword()).compareTo("admin")==0){
         Menu Obj = new Menu();
-        Obj.setSize(400, 400);
+        Obj.setSize(535, 300);
         Obj.setVisible(true);
         
         
