@@ -6,6 +6,8 @@
 
 package programa_salon;
 
+import Modelo.Cliente;
+
 /**
  *
  * @author Administrador
@@ -17,6 +19,12 @@ public class BusquedaCliente extends javax.swing.JFrame {
      */
     public BusquedaCliente() {
         initComponents();
+        
+       Cliente cl = new Cliente();
+       
+     
+        
+        
     }
 
     /**
@@ -223,7 +231,13 @@ public class BusquedaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+         
+       
+          
+         
+          
+          
+          
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void btnlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnlimpiarActionPerformed
