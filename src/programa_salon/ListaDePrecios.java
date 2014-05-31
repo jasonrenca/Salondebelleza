@@ -40,12 +40,12 @@ public class ListaDePrecios extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Lista de Precios");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(130, 10, 140, 22);
+        jLabel1.setBounds(160, 20, 140, 22);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Volver");
         getContentPane().add(jButton1);
-        jButton1.setBounds(329, 294, 71, 23);
+        jButton1.setBounds(370, 290, 71, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -61,12 +61,12 @@ public class ListaDePrecios extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 60, 440, 170);
+        jScrollPane1.setBounds(20, 60, 440, 130);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-20, -10, 500, 360);
+        jLabel2.setBounds(-20, -10, 490, 360);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

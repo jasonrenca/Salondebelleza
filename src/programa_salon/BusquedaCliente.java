@@ -150,12 +150,12 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(231, 290, 79, 23);
+        jButton1.setBounds(490, 300, 79, 23);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Modificar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(132, 261, 89, 23);
+        jButton2.setBounds(240, 90, 89, 23);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setText("Eliminar");
@@ -165,7 +165,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(231, 261, 79, 23);
+        jButton3.setBounds(240, 120, 90, 23);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setText("Agregar");
@@ -175,7 +175,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(45, 261, 81, 23);
+        jButton4.setBounds(240, 60, 90, 23);
 
         btnlimpiar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnlimpiar.setText("Limpiar");
@@ -185,12 +185,12 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(133, 290, 90, 23);
+        btnlimpiar.setBounds(130, 240, 90, 23);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(-5, -9, 360, 370);
+        jLabel8.setBounds(-10, 0, 600, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

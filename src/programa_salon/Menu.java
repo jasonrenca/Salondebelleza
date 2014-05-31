@@ -121,7 +121,7 @@ public class Menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         BusquedaCliente buscarcliente = new BusquedaCliente();
-        buscarcliente.setSize(362, 360);
+        buscarcliente.setSize(587, 351);
         buscarcliente.setVisible(true);
         
        
