@@ -29,9 +29,9 @@ public class ListaDePrecios extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -42,28 +42,26 @@ public class ListaDePrecios extends javax.swing.JFrame {
         getContentPane().add(jLabel1);
         jLabel1.setBounds(130, 10, 140, 22);
 
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jButton1.setText("Volver");
+        getContentPane().add(jButton1);
+        jButton1.setBounds(329, 294, 71, 23);
+
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Corte de Pelo", "Mujer", "6000"},
-                {"Corte de Pelo", "Hombre", "5000"},
-                {"Manicure", "Completa", "8000"},
-                {"", null, null},
-                {null, null, null},
-                {null, null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Servicio", "Descripcion", "Precio"
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 40, 390, 237);
-
-        jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton1.setText("Volver");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(329, 294, 71, 23);
+        jScrollPane1.setBounds(10, 60, 440, 170);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel2.setText("jLabel2");
