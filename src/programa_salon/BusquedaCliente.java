@@ -6,7 +6,13 @@
 
 package programa_salon;
 
+import Conexion.Conexion;
 import Modelo.Cliente;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -231,11 +237,21 @@ public class BusquedaCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-         
-       
-          
-         
-          
+     
+        PreparedStatement pst;
+        try {
+            pst = cn.prepareStatement("INSERT INTO Cliente(rut,nombre,direccion,telefono,fechanac,email) VALUES (?,?,?,?,?,?)");
+            pst.setString(1, txtrut.getText());
+            pst.setString(2, txtnombre.getText());
+            pst.setString(3, txtdireccion.getText());
+            pst.setString(4, txttelefono.getText());
+            pst.setString(5, txtnac.getText());
+            pst.setString(6, txtemail.getText());
+            pst.executeUpdate();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(BusquedaCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
           
           
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -307,4 +323,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
     private javax.swing.JTextField txtrut;
     private javax.swing.JTextField txttelefono;
     // End of variables declaration//GEN-END:variables
+   Conexion c = new Conexion();
+   Connection cn = c.conexion();
+
 }
