@@ -60,6 +60,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnlimpiar = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -193,6 +194,16 @@ public class BusquedaCliente extends javax.swing.JFrame {
         getContentPane().add(btnlimpiar);
         btnlimpiar.setBounds(130, 240, 90, 23);
 
+        jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jButton5.setText("Buscar");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton5);
+        jButton5.setBounds(240, 150, 90, 30);
+
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
@@ -267,6 +278,13 @@ public class BusquedaCliente extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnlimpiarActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+     
+        
+        
+
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -308,6 +326,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
