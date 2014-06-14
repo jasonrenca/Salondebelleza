@@ -47,7 +47,7 @@ public class ListaDePrecios extends javax.swing.JFrame {
             datos[1]= rs.getString(2);
             datos[2]= rs.getString(3);
             datos[3]= rs.getString(4);
-            modelo.addColumn(datos);
+            modelo.addRow(datos);
             
             }
             jTable1.setModel(modelo);
@@ -74,6 +74,7 @@ public class ListaDePrecios extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        txtLimpiar = new javax.swing.JButton();
         txtPrecio = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         txtCodigo = new javax.swing.JTextField();
@@ -90,7 +91,7 @@ public class ListaDePrecios extends javax.swing.JFrame {
 
         jLabel3.setText("CODIGO:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 60, 45, 14);
+        jLabel3.setBounds(20, 60, 60, 20);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Lista de Precios");
@@ -99,23 +100,32 @@ public class ListaDePrecios extends javax.swing.JFrame {
 
         jLabel5.setText("PRECIO:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(40, 120, 42, 14);
+        jLabel5.setBounds(20, 134, 60, 20);
 
         jLabel6.setText("COMENTARIO:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(300, 60, 72, 14);
+        jLabel6.setBounds(310, 60, 90, 20);
 
         jButton3.setText("Modificar");
         getContentPane().add(jButton3);
-        jButton3.setBounds(390, 120, 80, 23);
+        jButton3.setBounds(400, 120, 90, 30);
 
         jButton4.setText("Eliminar");
         getContentPane().add(jButton4);
-        jButton4.setBounds(480, 120, 69, 23);
+        jButton4.setBounds(510, 120, 80, 30);
+
+        txtLimpiar.setText("Limpiar Campos");
+        txtLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLimpiarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtLimpiar);
+        txtLimpiar.setBounds(383, 310, 120, 30);
         getContentPane().add(txtPrecio);
-        txtPrecio.setBounds(90, 120, 140, 20);
+        txtPrecio.setBounds(110, 130, 140, 30);
         getContentPane().add(txtNombre);
-        txtNombre.setBounds(90, 90, 140, 20);
+        txtNombre.setBounds(110, 90, 140, 30);
 
         txtCodigo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -123,13 +133,13 @@ public class ListaDePrecios extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtCodigo);
-        txtCodigo.setBounds(90, 60, 140, 20);
+        txtCodigo.setBounds(110, 50, 140, 30);
         getContentPane().add(txtComentario);
-        txtComentario.setBounds(390, 60, 150, 20);
+        txtComentario.setBounds(430, 50, 150, 30);
 
         jLabel4.setText("NOMBRE:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(40, 90, 46, 14);
+        jLabel4.setBounds(20, 100, 60, 20);
 
         jButton2.setText("Guardar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -138,12 +148,12 @@ public class ListaDePrecios extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(300, 120, 80, 23);
+        jButton2.setBounds(290, 120, 90, 30);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Volver");
         getContentPane().add(jButton1);
-        jButton1.setBounds(520, 310, 100, 23);
+        jButton1.setBounds(520, 310, 100, 30);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -164,7 +174,7 @@ public class ListaDePrecios extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-10, 0, 660, 360);
+        jLabel2.setBounds(-10, 0, 680, 380);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -177,14 +187,13 @@ public class ListaDePrecios extends javax.swing.JFrame {
 
          PreparedStatement pst;
         try {
-            pst = cn.prepareStatement("INSERT INTO Cliente(rut,nombre,direccion,telefono,fechanac,email) VALUES (?,?,?,?,?,?)");
-            pst.setString(1, txtrut.getText());
-            pst.setString(2, txtnombre.getText());
-            pst.setString(3, txtdireccion.getText());
-            pst.setString(4, txttelefono.getText());
-            pst.setString(5, txtnac.getText());
-            pst.setString(6, txtemail.getText());
+            pst = cn.prepareStatement("INSERT INTO Producto(codigo,nombre,precio,comentario) VALUES (?,?,?,?)");
+            pst.setString(1, txtCodigo.getText());
+            pst.setString(2, txtNombre.getText());
+            pst.setInt(3, Integer.parseInt(txtPrecio.getText()));
+            pst.setString(4, txtComentario.getText());
             pst.executeUpdate();
+            mostrardatos();
             
         } catch (SQLException ex) {
             Logger.getLogger(BusquedaCliente.class.getName()).log(Level.SEVERE, null, ex);
@@ -192,6 +201,14 @@ public class ListaDePrecios extends javax.swing.JFrame {
         
 
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLimpiarActionPerformed
+        // TODO add your handling code here:
+        txtCodigo.setText("");
+        txtNombre.setText("");
+        txtPrecio.setText("");
+        txtComentario.setText("");
+    }//GEN-LAST:event_txtLimpiarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -243,6 +260,7 @@ public class ListaDePrecios extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField txtCodigo;
     private javax.swing.JTextField txtComentario;
+    private javax.swing.JButton txtLimpiar;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables

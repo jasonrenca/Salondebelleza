@@ -112,6 +112,9 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        ListaDePrecios ls = new ListaDePrecios();
+        ls.setSize(668, 381);
+        ls.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
