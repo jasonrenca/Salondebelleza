@@ -6,6 +6,17 @@
 
 package programa_salon;
 
+import Conexion.Conexion;
+import com.mysql.jdbc.exceptions.DeadlockTimeoutRollbackMarker;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Administrador
@@ -17,6 +28,35 @@ public class ListaDePrecios extends javax.swing.JFrame {
      */
     public ListaDePrecios() {
         initComponents();
+        mostrardatos();
+    }
+    void mostrardatos(){
+    DefaultTableModel modelo = new DefaultTableModel();
+    modelo.addColumn("CODIGO");
+    modelo.addColumn("NOMBRE");
+    modelo.addColumn("PRECIO");
+    modelo.addColumn("COMENTARIO");
+    jTable1.setModel(modelo);
+    
+    String []datos = new String[4];
+        try {
+            Statement st = cn.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM Producto");
+            while(rs.next()){
+            datos[0]= rs.getString(1);
+            datos[1]= rs.getString(2);
+            datos[2]= rs.getString(3);
+            datos[3]= rs.getString(4);
+            modelo.addColumn(datos);
+            
+            }
+            jTable1.setModel(modelo);
+        } catch (SQLException ex) {
+            Logger.getLogger(ListaDePrecios.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    
+    
     }
 
     /**
@@ -30,7 +70,15 @@ public class ListaDePrecios extends javax.swing.JFrame {
 
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        txtPrecio = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtCodigo = new javax.swing.JTextField();
+        txtComentario = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -40,51 +88,110 @@ public class ListaDePrecios extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("CODIGO:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 60, 34, 14);
+        jLabel3.setBounds(40, 60, 45, 14);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Lista de Precios");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 20, 140, 22);
+        jLabel1.setBounds(240, 20, 140, 22);
 
-        jTextField1.setText("jTextField1");
-        getContentPane().add(jTextField1);
-        jTextField1.setBounds(90, 60, 100, 20);
+        jLabel5.setText("PRECIO:");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(40, 120, 42, 14);
 
-        jButton2.setText("jButton2");
+        jLabel6.setText("COMENTARIO:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(300, 60, 72, 14);
+
+        jButton3.setText("Modificar");
+        getContentPane().add(jButton3);
+        jButton3.setBounds(390, 120, 80, 23);
+
+        jButton4.setText("Eliminar");
+        getContentPane().add(jButton4);
+        jButton4.setBounds(480, 120, 69, 23);
+        getContentPane().add(txtPrecio);
+        txtPrecio.setBounds(90, 120, 140, 20);
+        getContentPane().add(txtNombre);
+        txtNombre.setBounds(90, 90, 140, 20);
+
+        txtCodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCodigoActionPerformed(evt);
+            }
+        });
+        getContentPane().add(txtCodigo);
+        txtCodigo.setBounds(90, 60, 140, 20);
+        getContentPane().add(txtComentario);
+        txtComentario.setBounds(390, 60, 150, 20);
+
+        jLabel4.setText("NOMBRE:");
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(40, 90, 46, 14);
+
+        jButton2.setText("Guardar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2);
-        jButton2.setBounds(290, 90, 73, 23);
+        jButton2.setBounds(300, 120, 80, 23);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Volver");
         getContentPane().add(jButton1);
-        jButton1.setBounds(380, 310, 71, 23);
+        jButton1.setBounds(520, 310, 100, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(10, 170, 440, 130);
+        jScrollPane1.setBounds(10, 170, 610, 130);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel2.setText("jLabel2");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(-20, -10, 490, 360);
+        jLabel2.setBounds(-10, 0, 660, 360);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCodigoActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+         PreparedStatement pst;
+        try {
+            pst = cn.prepareStatement("INSERT INTO Cliente(rut,nombre,direccion,telefono,fechanac,email) VALUES (?,?,?,?,?,?)");
+            pst.setString(1, txtrut.getText());
+            pst.setString(2, txtnombre.getText());
+            pst.setString(3, txtdireccion.getText());
+            pst.setString(4, txttelefono.getText());
+            pst.setString(5, txtnac.getText());
+            pst.setString(6, txtemail.getText());
+            pst.executeUpdate();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(BusquedaCliente.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,11 +231,21 @@ public class ListaDePrecios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtComentario;
+    private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables
+   Conexion c = new Conexion();
+   Connection cn = c.conexion();
 }

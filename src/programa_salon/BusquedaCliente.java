@@ -157,7 +157,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(470, 270, 79, 23);
+        jButton1.setBounds(250, 240, 79, 23);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Modificar");
