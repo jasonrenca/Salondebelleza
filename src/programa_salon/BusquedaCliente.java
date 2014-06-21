@@ -67,9 +67,9 @@ public class BusquedaCliente extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setText("Datos Del Cliente");
+        jLabel1.setText("Encabezado de Cliente");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(90, 20, 155, 22);
+        jLabel1.setBounds(120, 10, 220, 30);
 
         txtrut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,7 +77,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtrut);
-        txtrut.setBounds(128, 59, 100, 20);
+        txtrut.setBounds(90, 50, 130, 30);
 
         txtnombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,7 +85,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtnombre);
-        txtnombre.setBounds(86, 85, 130, 20);
+        txtnombre.setBounds(90, 90, 130, 30);
 
         txtdireccion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -93,7 +93,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtdireccion);
-        txtdireccion.setBounds(86, 116, 132, 20);
+        txtdireccion.setBounds(90, 210, 130, 30);
 
         txttelefono.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +101,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txttelefono);
-        txttelefono.setBounds(86, 142, 132, 20);
+        txttelefono.setBounds(90, 130, 130, 30);
 
         txtnac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,7 +109,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtnac);
-        txtnac.setBounds(86, 175, 132, 20);
+        txtnac.setBounds(90, 250, 130, 30);
 
         txtemail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,37 +117,37 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(txtemail);
-        txtemail.setBounds(86, 213, 132, 20);
+        txtemail.setBounds(90, 170, 130, 30);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setText("Rut del Cliente:");
+        jLabel2.setText("Rut:");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(15, 61, 95, 15);
+        jLabel2.setBounds(60, 60, 50, 20);
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Nombre:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(15, 87, 51, 15);
+        jLabel3.setBounds(30, 90, 60, 30);
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel4.setText("Direccion:");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(15, 118, 59, 15);
+        jLabel4.setBounds(20, 210, 70, 30);
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel5.setText("Telefono:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(15, 144, 57, 15);
+        jLabel5.setBounds(30, 140, 57, 15);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel6.setText("Fecha Nac.:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(15, 180, 67, 15);
+        jLabel6.setBounds(10, 260, 67, 15);
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel7.setText("Email:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(15, 215, 35, 15);
+        jLabel7.setBounds(50, 180, 35, 15);
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton1.setText("Salir");
@@ -157,12 +157,12 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(250, 240, 79, 23);
+        jButton1.setBounds(340, 310, 79, 23);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Modificar");
         getContentPane().add(jButton2);
-        jButton2.setBounds(240, 90, 89, 23);
+        jButton2.setBounds(230, 130, 90, 30);
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton3.setText("Eliminar");
@@ -172,7 +172,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(240, 120, 90, 23);
+        jButton3.setBounds(230, 170, 90, 30);
 
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton4.setText("Agregar");
@@ -182,7 +182,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(240, 60, 90, 23);
+        jButton4.setBounds(230, 90, 90, 30);
 
         btnlimpiar.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         btnlimpiar.setText("Limpiar");
@@ -192,7 +192,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(130, 240, 90, 23);
+        btnlimpiar.setBounds(110, 310, 90, 23);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setText("Buscar");
@@ -202,12 +202,12 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(240, 150, 90, 30);
+        jButton5.setBounds(230, 50, 90, 30);
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/9kotoj.png"))); // NOI18N
         jLabel8.setText("jLabel8");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(-10, 0, 600, 350);
+        jLabel8.setBounds(0, 0, 470, 350);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
