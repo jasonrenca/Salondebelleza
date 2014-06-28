@@ -58,6 +58,10 @@ public class Cliente {
         this.state = state;
         this.res = res;
     }
+    
+    public Cliente(String rut){
+    
+    }
 
     public String getRut() {
         return rut;

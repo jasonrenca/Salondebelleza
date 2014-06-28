@@ -157,7 +157,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(340, 310, 79, 23);
+        jButton1.setBounds(310, 290, 79, 23);
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jButton2.setText("Modificar");
@@ -192,7 +192,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(btnlimpiar);
-        btnlimpiar.setBounds(110, 310, 90, 23);
+        btnlimpiar.setBounds(110, 290, 90, 23);
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton5.setText("Buscar");
@@ -259,6 +259,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             pst.setString(5, txtnac.getText());
             pst.setString(6, txtemail.getText());
             pst.executeUpdate();
+            
             
         } catch (SQLException ex) {
             Logger.getLogger(BusquedaCliente.class.getName()).log(Level.SEVERE, null, ex);
