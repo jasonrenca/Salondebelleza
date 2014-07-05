@@ -13,6 +13,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -259,7 +260,7 @@ public class BusquedaCliente extends javax.swing.JFrame {
             pst.setString(5, txtnac.getText());
             pst.setString(6, txtemail.getText());
             pst.executeUpdate();
-            
+            JOptionPane.showMessageDialog(null, "Cliente registrado");
             
         } catch (SQLException ex) {
             Logger.getLogger(BusquedaCliente.class.getName()).log(Level.SEVERE, null, ex);
